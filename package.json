@@ -3,8 +3,12 @@
   "version": "1.0.0",
   "description": "Api Base Arquitecture",
   "main": "index.js",
+
+
+  
   "scripts": {
     "test": "node --test test/env_test.js",
+    "test_mocha": "mocha test/env_test.js",
     "test_env": "npx mocha --reporter mochawesome test/env_test.js",
     "dev": "nodemon run api/index.js",
     "BD": "nodemon run postgresql/index.js",
@@ -17,6 +21,8 @@
     "bcrypt": "^5.1.0",
     "body-parser": "^1.20.2",
     "cheerio": "*",
+    "expres": "^0.0.5",
+    "express": "^5.1.0",
     "jsonwebtoken": "^9.0.0",
     "node-fetch": "^3.3.0",
     "pg": "^8.9.0",

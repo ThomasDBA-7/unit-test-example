@@ -44,6 +44,21 @@ router.get('/list', async (req, res) => {
 })
 
 
+router.post('/hello/:id', async (req, res) => {
+    try {
+        const user = req.body.user
+        const id = req.params.id
+        response.success(req, res, {"id":id,"user":user}, 200);    
+    } catch (error) {
+        response.error(req, res, error.message, 500); 
+    }
+})
+
+
+
+
+
+
 router.get('/test_network/:radio', async (req, res) => {
     try {
         const radio = req.params.radio
